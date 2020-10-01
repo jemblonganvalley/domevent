@@ -26,7 +26,7 @@ body{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 40px;
     background-color: #bebebe;
     position: sticky;
     top: 0;
@@ -59,13 +59,11 @@ body{
 }
 
 .closeIcon{
-
     color: orange;
     font-size: 2rem;
     position: absolute;
     top: 15vh;
     right: 10%;
-
 }
 
 .closeIcon:hover{
@@ -99,11 +97,20 @@ body{
 }
 
 .home{
+    flex-direction: column;
+    justify-content: flex-start;
     /* background-image: url(https://picsum.photos/seed/13/900); */
     background-color: black;
     background-size: cover;
     background-attachment: fixed;
+}
+
+.home_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 40px;
+    height: 100%;
 }
 
 .homeImage{
@@ -130,11 +137,45 @@ body{
 }
 
 .about{
-    background-image: url(https://picsum.photos/seed/15/900);
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "box1 box2"
+    "box3 box4"
+    ;
+}
+
+.box{
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+
+.about_box1{
+    grid-template: box1;
+    background-image: url(https://picsum.photos/seed/25/600);
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
-    flex-direction: column;
-    justify-content: flex-start !important;
+    border-radius: 0 0 200px 0;
+}
+
+.about_box2{
+    grid-template: box2;
+}
+
+.about_grid3{
+    grid-template: box3;
+}
+
+.about_box4{
+    grid-template: box4;
+    background-image: url(https://picsum.photos/seed/13/600);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 200px 0 0 0;
 }
 
 .showcase{
@@ -168,6 +209,8 @@ body{
     color: white;
     position: sticky;
     top: 10vh;
+    z-index: 80;
+    margin-bottom: auto;
 }
 
 @keyframes bottomToTop{
