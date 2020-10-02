@@ -23,3 +23,16 @@ const closeModal = ()=>{
 
 }
 
+//Kita ambil dulu element yang diinginkan
+let showcase = document.getElementById('wrapper_showcase')
+
+//kita inject elementnya dengan syntax HTML
+// showcase.innerHTML += `
+//   <img src="https://picsum.photos/seed/13/300"/>
+// `
+
+for( var i = 0 ; i < 42 ; i++){
+  showcase.innerHTML += `
+    <img src='https://picsum.photos/seed/${100 + i}/200' alt='gambar ke ${i}'/>
+  `
+}
